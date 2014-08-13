@@ -1,0 +1,103 @@
+.sacredrelic-scrollbox-box {
+    position:absolute;
+    right:0px;
+    top:0px;
+    width:7px;
+}
+
+.sacredrelic-scrollbox-box .scaredrelic-scrollbox-uparrow {
+    width:7px;
+    height:15px;
+    left:0;
+    top:0;
+}
+.sacredrelic-scrollbox-box .upArrowOver {
+    width:10px;
+    height:10px;
+    left:0;
+    top:0;
+}
+.sacredrelic-scrollbox-box .upArrowDown {
+    background-position:-30px 0;
+    width:15px;
+    height:14px;
+    left:0;
+    top:0;
+}
+.sacredrelic-scrollbox-box .upArrowUp {
+    background-position:-0 0;
+    width:15px;
+    height:14px;
+    left:0;
+    top:0;
+}
+
+
+.sacredrelic-scrollbox-box .scaredrelic-scrollbox-downarrow {
+    width:7px;
+    height:5px;
+    left:0;
+    bottom:0;
+}
+.sacredrelic-scrollbox-box .downArrowOver {
+    background-position:-15px -14px;
+    width:15px;
+    height:14px;
+    left:0;
+    bottom:0;
+}
+.sacredrelic-scrollbox-box .downArrowDown {
+    background-position:-30px -14px;
+    width:15px;
+    height:14px;
+    left:0;
+    bottom:0;
+}
+.sacredrelic-scrollbox-box .downArrowUp {
+    background-position:-0 -14px;
+    width:15px;
+    height:14px;
+    left:0;
+    bottom:0;
+}
+
+.sacredrelic-scrollbox-box .scaredrelic-scrollbox-track {
+    width:5px;
+    top:0px;
+    bottom:0px;
+    left:0;
+    position: absolute;
+}
+.sacredrelic-scrollbox-box .scaredrelic-scrollbox-track .scaredrelic-scrollbox-trackblock,
+.sacredrelic-scrollbox-box .scaredrelic-scrollbox-track .scaredrelic-scrollbox-trackmousedown,
+.sacredrelic-scrollbox-box .scaredrelic-scrollbox-track .scaredrelic-scrollbox-trackmouseover,
+.sacredrelic-scrollbox-box .scaredrelic-scrollbox-track .scaredrelic-scrollbox-trackmouseup {
+    position:absolute;
+}
+
+.sacredrelic-scrollbox-box .scaredrelic-scrollbox-trackblocktop {
+    height:2px;
+    top:0;
+    left:0;
+    width:5px;
+}
+.sacredrelic-scrollbox-box .scaredrelic-scrollbox-trackblockbody {
+    top:2px;
+    left:0;
+    bottom:2px;
+    width: 5px;
+    border-radius: 4px;
+    background: #e8e9ea;
+}
+.sacredrelic-scrollbox-box .scaredrelic-scrollbox-trackblockbottom {
+    height:2px;
+    bottom:0;
+    left:0;
+    width:5px;
+}
+
+.sacredrelic-scrollbox-box .trackBlock, .sacredrelic-scrollbox-box .trackBlockOver, .sacredrelic-scrollbox-box .trackBlockDown, .sacredrelic-scrollbox-box .trackBlockUp {
+    overflow:hidden;
+    zoom:1;
+    width:15px;
+}

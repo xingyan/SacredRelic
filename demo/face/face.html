@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+        <title>face demo</title>
+        <meta name="description" content="face demo"/>
+        <meta name="author" content="xingyan"/>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <link href="http://s3.qhimg.com/!690373d8/reset.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="../../src/ui/face/face.css"/>
+        <link rel="stylesheet" type="text/css" href="../../src/ui/scroll/scroll.css" />
+
+        <link rel="shortcut icon" href="/favicon.ico"/>
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+
+        <link rel="stylesheet" href="../../src/ui/scroll/scroll.css" />
+        <script type="text/javascript" src="../../lib/jquery.js"></script>
+        <script type="text/javascript" src="../../src/base/sr.js"></script>
+        <script type="text/javascript" src="../../src/base/util.js"></script>
+        <script type="text/javascript" src="../../src/base/events.js"></script>
+        <script type="text/javascript" src="../../src/ui/ui.js"></script>
+
+        <script type="text/javascript" src="../../src/ui/scroll/scroll.js"></script>
+        <script type="text/javascript" src="../../src/ui/face/face.js"></script>
+        <style>
+            #face_container {
+
+            }
+        </style>
+    </head>
+    <body>
+        <div id="face_container">
+            <div class="pop_face" style="display:block">
+                <div class="face_conn">
+                    <i class="i">◆<i>◆</i></i>
+                    <!--fact24 star-->
+                    <div class="face_wrap" style="display:block">
+                        <ul class="face_list clearfix">
+                            <li class="hover"><img src="resources/themes/default/images/temp_face.png" width="24" height="24"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face.png" width="24" height="24"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face.png" width="24" height="24"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face.png" width="24" height="24"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face.png" width="24" height="24"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face.png" width="24" height="24"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face.png" width="24" height="24"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face.png" width="24" height="24"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face.png" width="24" height="24"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face.png" width="24" height="24"></li>
+                        </ul>
+                    </div>
+                    <!--face24 end-->
+                    <!--fact32 star-->
+                    <div class="face_wrap" style="display:none">
+                        <ul class="face_list face_list_32 clearfix">
+                            <li class="hover"><img src="../../resources/themes/default/images/temp_face_32.gif" width="32" height="32"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face_32.gif" width="32" height="32"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face_32.gif" width="32" height="32"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face_32.gif" width="32" height="32"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face_32.gif" width="32" height="32"></li>
+                        </ul>
+                    </div>
+                    <!--face32 end-->
+                    <!--fact50 star-->
+                    <div class="face_wrap" style="display:none">
+                        <ul class="face_list face_list_50 clearfix">
+                            <li class="hover"><img src="../../resources/themes/temp_face_50.gif" width="50" height="50"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face_50.gif" width="50" height="50"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face_50.gif" width="50" height="50"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face_50.gif" width="50" height="50"></li>
+                            <li><img src="../../resources/themes/default/images/temp_face_50.gif" width="50" height="50"></li>
+                        </ul>
+                    </div>
+                    <!--face50 end-->
+                    <ul class="face_all clearfix">
+                        <li class="cur"><img src="../../resources/themes/default/images/temp_face.png" width="24" height="24"></li>
+                        <li><img src="../../resources/themes/default/images/temp_face_32.png" width="24" height="24"></li>
+                        <li><img src="../../resources/themes/default/images/temp_face_64.png" width="24" height="24"></li>
+                    </ul>
+                </div>
+                <iframe scrolling="no" frameborder="0"  class="iframe"></iframe>
+            </div>
+        </div>
+        <script type="text/javascript">
+            var data = {
+                "24": {
+                    pic: "temp_face.png",
+                    list: [
+                        { pic: "04.gif", alt: "04" },
+                        { pic: "05.gif", alt: "05" },
+                        { pic: "06.gif", alt: "06" },
+                        { pic: "07.gif", alt: "07" },
+                        { pic: "08.gif", alt: "08" },
+                        { pic: "09.gif", alt: "09" },
+                        { pic: "10.gif", alt: "10" },
+                        { pic: "11.gif", alt: "11" },
+                        { pic: "12.gif", alt: "12" },
+                        { pic: "13.gif", alt: "13" },
+                        { pic: "14.gif", alt: "14" },
+                        { pic: "15.gif", alt: "15" },
+                        { pic: "16.gif", alt: "16" },
+                        { pic: "17.gif", alt: "17" },
+                        { pic: "18.gif", alt: "18" },
+                        { pic: "19.gif", alt: "19" },
+                        { pic: "20.gif", alt: "20" },
+                        { pic: "21.gif", alt: "21" }
+                    ]
+                },
+                "32": {
+                    pic: "temp_face_32.png",
+                    list: [
+                        { pic: "01.gif", alt: "01" },
+                        { pic: "02.gif", alt: "02" },
+                        { pic: "03.gif", alt: "03" },
+                        { pic: "04.gif", alt: "04" },
+                        { pic: "05.gif", alt: "05" },
+                        { pic: "06.gif", alt: "06" },
+                        { pic: "07.gif", alt: "07" },
+                        { pic: "08.gif", alt: "08" },
+                        { pic: "09.gif", alt: "09" },
+                        { pic: "10.gif", alt: "10" },
+                        { pic: "11.gif", alt: "11" },
+                        { pic: "12.gif", alt: "12" },
+                        { pic: "13.gif", alt: "13" },
+                        { pic: "14.gif", alt: "14" },
+                        { pic: "15.gif", alt: "15" },
+                        { pic: "16.gif", alt: "16" },
+                        { pic: "17.gif", alt: "17" },
+                        { pic: "18.gif", alt: "18" },
+                        { pic: "19.gif", alt: "19" },
+                        { pic: "20.gif", alt: "20" },
+                        { pic: "21.gif", alt: "21" },
+                        { pic: "22.gif", alt: "22" },
+                        { pic: "23.gif", alt: "23" },
+                        { pic: "24.gif", alt: "24" },
+                        { pic: "25.gif", alt: "25" },
+                        { pic: "26.gif", alt: "26" },
+                        { pic: "27.gif", alt: "27" },
+                        { pic: "28.gif", alt: "28" },
+                        { pic: "29.gif", alt: "29" },
+                        { pic: "30.gif", alt: "30" },
+                        { pic: "31.gif", alt: "31" },
+                        { pic: "32.gif", alt: "32" },
+                        { pic: "33.gif", alt: "33" },
+                        { pic: "34.gif", alt: "34" },
+                        { pic: "35.gif", alt: "35" },
+                        { pic: "36.gif", alt: "36" },
+                        { pic: "37.gif", alt: "37" },
+                        { pic: "38.gif", alt: "38" },
+                        { pic: "39.gif", alt: "39" },
+                        { pic: "40.gif", alt: "40" },
+                        { pic: "41.gif", alt: "41" },
+                        { pic: "42.gif", alt: "42" },
+                        { pic: "43.gif", alt: "43" },
+                        { pic: "44.gif", alt: "44" },
+                        { pic: "45.gif", alt: "45" },
+                        { pic: "46.gif", alt: "46" },
+                        { pic: "47.gif", alt: "47" },
+                        { pic: "48.gif", alt: "48" },
+                        { pic: "49.gif", alt: "49" },
+                        { pic: "50.gif", alt: "50" }
+                    ]
+                },
+                "50": {
+                    pic: "temp_face_64.png",
+                    list: [
+                        { pic: "07.gif", alt: "07" },
+                        { pic: "08.gif", alt: "08" },
+                        { pic: "09.gif", alt: "09" },
+                        { pic: "10.gif", alt: "10" },
+                        { pic: "11.gif", alt: "11" },
+                        { pic: "12.gif", alt: "12" },
+                        { pic: "13.gif", alt: "13" },
+                        { pic: "14.gif", alt: "14" },
+                        { pic: "15.gif", alt: "15" },
+                        { pic: "16.gif", alt: "16" },
+                        { pic: "17.gif", alt: "17" },
+                        { pic: "18.gif", alt: "18" },
+                        { pic: "19.gif", alt: "19" },
+                        { pic: "20.gif", alt: "20" },
+                        { pic: "21.gif", alt: "21" },
+                        { pic: "22.gif", alt: "22" },
+                        { pic: "23.gif", alt: "23" },
+                        { pic: "24.gif", alt: "24" },
+                        { pic: "25.gif", alt: "25" },
+                        { pic: "26.gif", alt: "26" },
+                        { pic: "27.gif", alt: "27" },
+                        { pic: "28.gif", alt: "28" },
+                        { pic: "29.gif", alt: "29" },
+                        { pic: "30.gif", alt: "30" },
+                        { pic: "31.gif", alt: "31" },
+                        { pic: "32.gif", alt: "32" },
+                        { pic: "33.gif", alt: "33" },
+                        { pic: "34.gif", alt: "34" },
+                        { pic: "35.gif", alt: "35" },
+                        { pic: "36.gif", alt: "36" },
+                        { pic: "37.gif", alt: "37" }
+                    ]
+                }
+            };
+            $("#face_container").faceBar({
+                data: data,
+                host: "../../resources/themes/default/images/"
+            });
+        </script>
+    </body>
+</html>

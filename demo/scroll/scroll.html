@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>scroll demo</title>
+    <meta name="description" content="scroll demo"/>
+    <meta name="author" content="xingyan"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+
+    <style type="text/css">
+        * {
+            font:400 12px/18px Arial;
+        }
+        #scrollPaneBox {
+            width:300px;
+            height:300px;
+            overflow:hidden;
+            border:1px solid #CCC;
+            position:relative;
+            float:left;
+        }
+        #scrollPane {
+            height:300px;
+            overflow:hidden;
+        }
+
+        #real {
+            width:300px;
+            height:300px;
+            overflow:auto;
+            border:1px solid #CCC;
+            position:relative;
+            float:left;
+            margin-left:50px;
+        }
+    </style>
+    <link rel="stylesheet" href="../../src/ui/scroll/scroll.css" />
+    <script type="text/javascript" src="../../lib/jquery.js"></script>
+    <script type="text/javascript" src="../../src/base/sr.js"></script>
+    <script type="text/javascript" src="../../src/base/util.js"></script>
+    <script type="text/javascript" src="../../src/base/events.js"></script>
+    <script type="text/javascript" src="../../src/ui/ui.js"></script>
+
+    <script type="text/javascript" src="../../src/ui/scroll/scroll.js"></script>
+</head>
+    <body>
+    <div style="text-indent:20px;margin:10px;color:red">如下所示,左侧为模拟的滚动条, 右侧的为真实的</div>
+    <div style="overflow:hidden;zoom:1;">
+        <div id="scrollPaneBox">
+            <div id="scrollPane">
+            </div>
+        </div>
+
+
+        <div id="real">
+
+        </div>
+    </div>
+
+    <div style='margin-top:20px'>
+        <input type="button" value="增加记录" onclick="addRecord()" />
+        <input type="button" value="减少记录" onclick="delRecord()" />
+        <input type="button" value="改变窗口" onclick="resize()" />
+        <input type="button" value="dispose" onclick="dispose()" />
+        <input type="button" value="滚动至顶" onclick="toTop()" />
+        <input type="button" value="滚动至底" onclick="toBottom()" />
+    </div>
+    </body>
+    <script language="JavaScript">
+        var str = '李清照的成长，与她所处的自然环境也是分不开的。李清照幼年，大部分时间是在风景如画，'
+         + '人文荟萃的家乡历城渡过的。大约在她五六岁时，因父亲李格非作了京官，她便也随父母迁居东京汴梁('
+         + '今河南省开封市)。她是在东京长大的。那时候，北宋统治阶级享乐成风，东京表面上仍极繁荣。李清照'
+         + '作为一个士大夫阶层的大家闺秀，由于封建礼教的禁锢，不可能像男子一样走出家门。接触整个社会。但'
+         + '她毕竟出身于城市，不像乡村地主家里的女子那样闭塞。她不仅可以划着小船，嬉戏于藕花深处，而且可'
+         + '以跟着家人到东京街头，观赏奇巧的花灯和繁华的街景、这一切，陶冶了她的性情。丰富了她的精神生活。'
+         + '李清照爱好自然的性格和描摹的自然的能力，说明了她曾经受过故乡山东的涵育。而她在爱情描写上的"毫无'
+         + '顾藉"，显示了都市社会风气和文学气氛对她的熏染。';
+        str += str;
+        var box = document.getElementById('scrollPaneBox'),
+            pane = document.getElementById('scrollPane'),
+            real = document.getElementById('real');
+        var arr = [];
+        for(var i = 0 ; i < 1 ; i ++){
+            arr.push('<div style="margin:5px 0;font:400 12px/20px normal">' + str + '<font color="red">[order '+(i+1)+']</font></div>');
+        }
+        pane.innerHTML = arr.join('');
+        real.innerHTML = arr.join('');
+        $(box).scrollBar({
+            el: pane
+        //    hasArrow: false
+        });
+        var sPane = $(box).data("SacredRelic_ui_scrollBar");
+        var count = 1;
+        function addRecord(){
+            count += 3;
+            var tArr = new Array(count);
+            for(var i = 0 ; i < tArr.length; i ++){
+                tArr[i] = arr.join('');
+            }
+            pane.innerHTML = tArr.join('');
+            real.innerHTML = tArr.join('');
+        }
+        function delRecord(){
+            count -= 3;
+            if(count < 0){count = 0;}
+            var tArr = new Array(count);
+            for(var i = 0 ; i < tArr.length; i ++){
+                tArr[i] = arr.join('');
+            }
+            pane.innerHTML = tArr.join('');
+            real.innerHTML = tArr.join('');
+        }
+
+        function dispose(){
+            sPane.dispose();
+            sPane = null;
+        }
+        var x = 300;
+        function resize(){
+            if (x == 300) {
+                box.style.height = '350px';
+                box.style.width = '350px';
+                real.style.height = '350px';
+                real.style.width = '350px';
+                x = 350;
+            }else{
+                box.style.height = '300px';
+                box.style.width = '300px';
+                real.style.height = '300px';
+                real.style.width = '300px';
+                x = 300;
+            }
+            sPane.resize();
+        }
+
+        function toTop(){
+            sPane && sPane.scrollToTop();
+            real.scrollTop = 0;
+        }
+        function toBottom(){
+            sPane && sPane.scrollToBottom();
+            real.scrollTop = real.scrollHeight;
+        }
+    </script>
+</html>
