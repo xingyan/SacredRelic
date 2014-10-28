@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>苹果老虎机demo</title>
+
+    <link rel="stylesheet" href="http://s3.qhimg.com/!690373d8/reset.css" />
+    <link rel="stylesheet" href="../../src/ui/apple-slots/apple-slots.css" />
+
+    <script type="text/javascript" src="../../lib/jquery.js"></script>
+
+    <script type="text/javascript" src="../../src/base/sr.js"></script>
+    <script type="text/javascript" src="../../src/base/util.js"></script>
+    <script type="text/javascript" src="../../src/base/events.js"></script>
+    <script type="text/javascript" src="../../src/base/template.js"></script>
+    <script type="text/javascript" src="../../src/ui/ui.js"></script>
+    <script type="text/javascript" src="../../src/ui/apple-slots/apple-slots.js"></script>
+
+    <style>
+        body {
+            background: #000;
+        }
+        .button-area {
+            position: fixed;
+            right: 100px;
+            top: 100px;
+            max-width: 450px;
+        }
+        button {
+            display: inline-block;
+            padding: 5px 15px;
+            margin: 5px;
+        }
+        .item {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="item" id="apple_slots_container" style="width:390px;height:275px;"></div>
+    <div class="item" id="apple_slots_8container" style="width:234px;height:165px;"></div>
+    <div class="item" id="apple_slots_12container"></div>
+    <div class="button-area">
+        <button data-id="109">抽到谢谢参与</button>
+        <button data-id="114">抽到游乐豆</button>
+        <button data-id="115">抽到奇天灵猫</button>
+        <button data-id="116">抽到贴纸</button>
+        <button data-id="117">抽到100充值卡</button>
+        <button data-id="118">抽到降魔礼包</button>
+        <button data-id="120">抽到修罗礼包</button>
+        <button data-id="121">抽到平板电脑</button>
+    </div>
+    <script type="text/javascript" src="apple-slots.js"></script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 /**
  * @file
+ * @author xingyan.me@gmail.com
  * @version 1.0
  */
 ;(function(window, undefined) {
